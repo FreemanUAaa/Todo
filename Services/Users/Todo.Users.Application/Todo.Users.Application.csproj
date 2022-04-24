@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Handlers\" />
-    <Folder Include="Helpers\" />
+    <Folder Include="Helpers\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Todo.Users.Core\Todo.Users.Core.csproj" />
+    <ProjectReference Include="..\Todo.Users.Producers\Todo.Users.Producers.csproj" />
   </ItemGroup>
 
 </Project>

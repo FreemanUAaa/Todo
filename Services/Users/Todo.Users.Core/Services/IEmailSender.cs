@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace Todo.Users.Core.Services
 {
@@ -6,6 +7,6 @@ namespace Todo.Users.Core.Services
     {
         Task SendMessageAsync(string to, string subject, string text = "", string html = "");
 
-        Task SendActivationUserMessageAsync(string to);
+        Task SendActivationUserMessageAsync(string to, Guid userId);
     }
 }

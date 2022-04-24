@@ -12,6 +12,8 @@ namespace Todo.Users.Core.Models
 
         public string UserName { get; set; }
 
+        public bool IsActivated { get; set; }
+
         public string PasswordHash { get; set; }
 
         public byte[] PasswordSalt { get; set; }
