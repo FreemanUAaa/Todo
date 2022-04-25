@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.DeleteUser
+namespace Todo.Users.Application.Handlers.Users.Commands.DeleteUser
 {
     public class DeleteUserCommand : IRequest
     {

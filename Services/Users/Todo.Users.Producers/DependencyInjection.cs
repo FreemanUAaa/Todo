@@ -15,6 +15,7 @@ namespace Todo.Users.Producers
             });
 
             services.AddTransient<IUserCoverProducer, UserCoverProducer>();
+            services.AddTransient<ICacheProducer, CacheProducer>();
 
             return services;
         }

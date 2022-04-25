@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.SendActivationMessage
+namespace Todo.Users.Application.Handlers.Users.Commands.SendActivationMessage
 {
     public class SendActivationMessageCommandValidator : AbstractValidator<SendActivationMessageCommand>
     {

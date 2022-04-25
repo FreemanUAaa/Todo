@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using Todo.Users.Application.Behaviors;
+using Todo.Users.Application.Services;
+using Todo.Users.Core.Options;
+using Todo.Users.Core.Services;
 
 namespace Todo.Users.Application
 {
@@ -18,7 +21,7 @@ namespace Todo.Users.Application
             services.AddStackExchangeRedisCache(opt =>
             {
                 opt.Configuration = redisConnection;
-                opt.InstanceName = "ApplicationCache";
+                opt.InstanceName = "Cache";
             });
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
@@ -26,6 +29,9 @@ namespace Todo.Users.Application
 
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
+
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IFileManager, FileManager>();
 
             AuthOptions authOptions = configuration.GetSection("Auth").Get<AuthOptions>();
 

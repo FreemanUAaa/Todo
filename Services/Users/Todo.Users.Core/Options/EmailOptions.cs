@@ -4,9 +4,15 @@
     {
         public string Host { get; set; }   
 
-        public string Post { get; set; }
+        public int Port { get; set; }
 
-        public EmailOptions(string host, string post) => 
-            (Host, Post) = (host, post);
+        public string From { get; set; }
+
+        public string Email { get; set; }
+
+        public string Password { get; set; }
+
+        public EmailOptions(string host, int port, string from, string email, string password) => 
+            (Host, Port, From, Email, Password) = (host, port, from, email, password);
     }
 }

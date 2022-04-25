@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\" />
-    <Folder Include="Helpers\Users\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="11.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentValidation" Version="10.4.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
+    <PackageReference Include="MailKit" Version="3.2.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.24" />
@@ -28,6 +24,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Todo.Users.Core\Todo.Users.Core.csproj" />
     <ProjectReference Include="..\Todo.Users.Producers\Todo.Users.Producers.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handlers\UserCovers\Queries\" />
+    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>

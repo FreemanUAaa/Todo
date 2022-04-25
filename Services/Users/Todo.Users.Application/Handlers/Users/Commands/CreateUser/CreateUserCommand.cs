@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.CreateUser
+namespace Todo.Users.Application.Handlers.Users.Commands.CreateUser
 {
     public class CreateUserCommand : IRequest<Guid>
     {

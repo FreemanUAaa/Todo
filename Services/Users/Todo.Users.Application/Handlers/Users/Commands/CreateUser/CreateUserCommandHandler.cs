@@ -11,7 +11,7 @@ using Todo.Users.Core.Helpers.Salts;
 using Todo.Users.Core.Models;
 using Todo.Users.Core.Services;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.CreateUser
+namespace Todo.Users.Application.Handlers.Users.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     {
@@ -28,7 +28,6 @@ namespace Todo.Users.Application.Helpers.Users.Commands.CreateUser
         {
             if (database.Users.Any(x => x.Email == request.Email))
             {
-                logger.LogInformation("Email is already used");
                 throw new Exception(ExceptionStrings.EmailIsAlreadyUsed);
             }
 

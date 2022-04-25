@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.DeleteUser
+namespace Todo.Users.Application.Handlers.Users.Commands.DeleteUser
 {
     public class DeleteUserCommandValidator : AbstractValidator<DeleteUserCommand>
     {

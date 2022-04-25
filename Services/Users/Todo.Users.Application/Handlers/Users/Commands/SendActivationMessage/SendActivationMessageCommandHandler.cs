@@ -9,7 +9,7 @@ using Todo.Users.Core.Exceptions;
 using Todo.Users.Core.Models;
 using Todo.Users.Core.Services;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.SendActivationMessage
+namespace Todo.Users.Application.Handlers.Users.Commands.SendActivationMessage
 {
     public class SendActivationMessageCommandHandler : IRequestHandler<SendActivationMessageCommand>
     {

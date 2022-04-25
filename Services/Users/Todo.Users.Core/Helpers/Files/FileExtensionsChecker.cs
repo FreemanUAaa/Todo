@@ -8,7 +8,7 @@ namespace Todo.Users.Core.Helpers.Files
             ".png", ".jpg", ".jpeg", ".jfif", ".pjpeg", ".pjp"
         };
 
-        public static bool IsValidUserPCoverExtension(string extension)
+        public static bool IsValidUserCoverExtension(string extension)
         {
             if (!extension.Contains("."))
             {

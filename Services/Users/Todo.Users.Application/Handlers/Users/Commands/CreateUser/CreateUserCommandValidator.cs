@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace Todo.Users.Application.Helpers.Users.Commands.CreateUser
+namespace Todo.Users.Application.Handlers.Users.Commands.CreateUser
 {
     public class CreateUserCommandValidator : AbstractValidator<CreateUserCommand>
     {
