@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
@@ -24,7 +23,7 @@ namespace Todo.Users.Application.Handlers.Users.Commands.SendActivationMessage
 
         public async Task<Unit> Handle(SendActivationMessageCommand request, CancellationToken cancellationToken)
         {
-            User user = await database.Users.FirstOrDefaultAsync(x => x.Email == request.Email);
+            User user = await database.Users.FindAsync(request.UserId);
 
             if (user == null)
             {

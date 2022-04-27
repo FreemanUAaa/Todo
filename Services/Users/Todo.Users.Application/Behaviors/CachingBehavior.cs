@@ -4,10 +4,11 @@ using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using Todo.Users.Core.Interfaces.Caching;
 
 namespace Todo.Users.Application.Behaviors
 {
-    public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>, ICacheableMediatrQuery
+    public class CachingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>, ICacheableMediatorQuery
     {
         private readonly ILogger<CachingBehavior<TRequest, TResponse>> logger;
 

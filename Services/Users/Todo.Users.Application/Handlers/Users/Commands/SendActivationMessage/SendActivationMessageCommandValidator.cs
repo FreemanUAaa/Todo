@@ -6,7 +6,7 @@ namespace Todo.Users.Application.Handlers.Users.Commands.SendActivationMessage
     {
         public SendActivationMessageCommandValidator()
         {
-            RuleFor(x => x.Email).NotEmpty();
+            RuleFor(x => x.UserId).NotEmpty();
         }
     }
 }

@@ -8,6 +8,8 @@
 
         public static string ExtensionNotSupported => "Extension not supported";
 
+        public static string ErrorOccurred => "An unforeseen mistake occurred";
+
         public static string EmailIsAlreadyUsed => "Email is already used";
 
         public static string FailedUpdateCover => "Failed to update cover";

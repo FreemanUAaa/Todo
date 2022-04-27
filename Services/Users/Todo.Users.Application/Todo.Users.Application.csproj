@@ -27,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\UserCovers\Queries\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
 

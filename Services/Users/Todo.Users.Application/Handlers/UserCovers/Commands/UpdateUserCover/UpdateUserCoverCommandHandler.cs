@@ -41,6 +41,7 @@ namespace Todo.Users.Application.Handlers.UserCovers.Commands.UpdateUserCover
                 };
 
                 database.UserCovers.Add(cover);
+                await database.SaveChangesAsync(cancellationToken);
             }
 
             string extension = Path.GetExtension(request.File.FileName);
